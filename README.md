@@ -2,7 +2,7 @@
 
 A beautiful, lightweight, and client-side web application designed to overlay network devices and measure cable runs directly on floorplans (supporting image files).
 
-Vibecoded with Gemini & refined using minimalist code design principles.
+⚡ **100% Vibecoded** with **Gemini 3.6 (Medium - High)** & **Gemini 3.1 Pro (High)**, refined using minimalist code design principles.
 
 ---
 
@@ -95,6 +95,9 @@ Speed up your drafting workflow using these keyboard shortcuts:
 
 ## 🛠️ Built With
 
+- **100% Vibecoded** - Fully engineered and built through AI pair programming:
+  - **Gemini 3.6 (Medium - High)**
+  - **Gemini 3.1 Pro (High)**
 - **HTML5 Canvas** - High-performance drawing engine.
 - **Vanilla CSS3** - Customized styling with CSS custom properties (variables) for theme management.
 - **Vanilla JavaScript** - Clean, zero-framework logic.
