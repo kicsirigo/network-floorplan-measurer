@@ -4,6 +4,19 @@ A lightweight, client-side web application to place network devices, route cable
 
 ---
 
+## Screenshots
+
+### Light Theme & Floorplan Overview
+![Measurer App Light Theme](screenshots/overview-light.png)
+
+### Dark Theme & Cable Routing
+![Measurer App Dark Theme](screenshots/dark-mode.png)
+
+### Switch Port Configuration
+![Switch Port Configuration Modal](screenshots/port-config.png)
+
+---
+
 ## Features
 
 - **Floorplan Support**: Load standard raster images (PNG, JPEG, WebP, GIF, BMP) or single-page PDF floorplans via file picker or drag-and-drop.
