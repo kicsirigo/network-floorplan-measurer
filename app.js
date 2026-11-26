@@ -8,7 +8,13 @@ const i18n = {
             themeDark: "Dark", themeLight: "Light",
             titleMenu: "Menu", titleTheme: "Toggle Theme", titleLayers: "Toggle Cable/Device Visibility", titleGrid: "Toggle Snap to Grid",
             titleZoomIn: "Zoom In", titleZoomOut: "Zoom Out", titleZoomReset: "Reset View", titleClose: "Close",
-            btnLayers: "Layers", btnGrid: "Grid",
+            titleOpen: "Open Floorplan or .plan (O)", titleFile: "File & Storage",
+            titleSelect: "Select, Move & Resize (V)", titleScale: "Calibrate Scale (S)", titleSetScale: "Confirm Scale",
+            titleMeasure: "Draw Cables (M)", titleNewCable: "Start New Cable (N / Enter)",
+            titleWireway: "Draw Wire-way (W)", titleNewWireway: "Start New Wire-way (Q / Enter)",
+            titleConnect: "Connect Device Ports (C)", titleDelete: "Delete Elements (E)",
+            titleUndo: "Undo (Ctrl+Z)", titleRedo: "Redo (Ctrl+Y)",
+            btnOpen: "Open", btnFile: "File", btnLayers: "Layers", btnGrid: "Grid", btnRedo: "Redo",
             swDeviceName: "Name:", swDeviceNamePh: "Device name", swPorts: "Ports:",
             swEditorPlaceholder: "Click a port to configure it.",
             swPortTitle: "Port {0}",
@@ -18,9 +24,9 @@ const i18n = {
             swConnectedTo: "Connected to", swConnPh: "e.g. PP-1 port 3",
             swNotes: "Notes", swNotesPh: "optional notes",
             swClearPort: "Clear Port", swSaveClose: "Save & Close",
-            swRackInfo: "This is a rack cabinet. Switch to Drag mode (D) and drag any edge or corner of the rack on the map to resize it.",
-            btnScale: "Scale", btnSetScale: "Confirm", btnDrag: "Drag", btnSelect: "Select", btnMeasure: "Draw Cables", btnWireway: "Wire-way",
-            btnNewCable: "New Cable", btnNewWireway: "New Wire-way", btnConnect: "Connect", btnDelete: "Delete", selectPort: "Select Port", btnUndo: "Undo", btnClear: "Clear All", btnExport: "Export PDF", btnExportPlan: "Save .plan",
+            swRackInfo: "This is a rack cabinet. In Select mode (V), drag any edge or corner of the rack on the map to resize it.",
+            btnScale: "Scale", btnSetScale: "Confirm", btnSelect: "Select", btnMeasure: "Cables", btnWireway: "Wire-way",
+            btnNewCable: "New", btnNewWireway: "New", btnConnect: "Connect", btnDelete: "Delete", selectPort: "Select Port", btnUndo: "Undo", btnClear: "Clear All", btnExport: "Export PDF", btnExportPlan: "Save .plan",
             btnAutosave: "Auto-save", titleAutosave: "Toggle Auto-save to Browser Storage",
             btnWipeStorage: "Wipe Saved", titleWipeStorage: "Wipe saved browser data and reset floorplan",
             confirmWipeStorage: "Remove the floorplan and all saved data from browser storage?",
@@ -43,7 +49,13 @@ const i18n = {
             themeDark: "Sötét", themeLight: "Világos",
             titleMenu: "Menü", titleTheme: "Téma váltása", titleLayers: "Rétegek elrejtése/mutatása", titleGrid: "Rácshoz illesztés",
             titleZoomIn: "Nagyítás", titleZoomOut: "Kicsinyítés", titleZoomReset: "Nézet visszaállítása", titleClose: "Bezárás",
-            btnLayers: "Rétegek", btnGrid: "Rács",
+            titleOpen: "Alaprajz vagy .plan megnyitása (O)", titleFile: "Fájl és tároló",
+            titleSelect: "Kijelölés, mozgatás és átméretezés (V)", titleScale: "Méretarány kalibrálása (S)", titleSetScale: "Méretarány véglegesítése",
+            titleMeasure: "Kábelek rajzolása (M)", titleNewCable: "Új kábel indítása (N / Enter)",
+            titleWireway: "Nyomvonal rajzolása (W)", titleNewWireway: "Új nyomvonal indítása (Q / Enter)",
+            titleConnect: "Eszközportok összekötése (C)", titleDelete: "Elemek törlése (E)",
+            titleUndo: "Visszavonás (Ctrl+Z)", titleRedo: "Újra (Ctrl+Y)",
+            btnOpen: "Megnyitás", btnFile: "Fájl", btnLayers: "Rétegek", btnGrid: "Rács", btnRedo: "Újra",
             swDeviceName: "Név:", swDeviceNamePh: "Eszköz neve", swPorts: "Portok:",
             swEditorPlaceholder: "Kattints egy portra a konfiguráláshoz.",
             swPortTitle: "Port {0}",
@@ -53,9 +65,9 @@ const i18n = {
             swConnectedTo: "Csatlakoztatva", swConnPh: "pl. PP-1 port 3",
             swNotes: "Megjegyzés", swNotesPh: "opcionális megjegyzés",
             swClearPort: "Port törlése", swSaveClose: "Mentés és bezárás",
-            swRackInfo: "Ez egy rack szekrény. Válts Mozgatás módba (D), és húzd a szekrény bármelyik szélét vagy sarkát az átméretezéshez.",
-            btnScale: "Méretarány", btnSetScale: "Véglegesítés", btnDrag: "Mozgatás", btnSelect: "Kijelölés", btnMeasure: "Kábelezés", btnWireway: "Nyomvonal",
-            btnNewCable: "Új kábel", btnNewWireway: "Új nyomvonal", btnConnect: "Összekötés", btnDelete: "Törlés", selectPort: "Válassz Portot", btnUndo: "Vissza", btnClear: "Minden törlése", btnExport: "PDF Export", btnExportPlan: "Mentés .plan",
+            swRackInfo: "Ez egy rack szekrény. Kijelölés módban (V) húzd a szekrény bármelyik szélét vagy sarkát az átméretezéshez.",
+            btnScale: "Méretarány", btnSetScale: "Véglegesítés", btnSelect: "Kijelölés", btnMeasure: "Kábelek", btnWireway: "Nyomvonal",
+            btnNewCable: "Új", btnNewWireway: "Új", btnConnect: "Összekötés", btnDelete: "Törlés", selectPort: "Válassz Portot", btnUndo: "Vissza", btnClear: "Minden törlése", btnExport: "PDF Export", btnExportPlan: "Mentés .plan",
             btnAutosave: "Automatikus mentés", titleAutosave: "Automatikus böngésző-mentés be/ki",
             btnWipeStorage: "Mentés törlése", titleWipeStorage: "Böngészőben tárolt adatok és alaprajz teljes törlése",
             confirmWipeStorage: "Törlöd az alaprajzot és az összes böngészőben tárolt adatot?",
@@ -207,13 +219,19 @@ const i18n = {
     const ICON_EYE = '<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle>';
     const ICON_EYE_OFF = '<path d="M17.94 17.94A10.07 10.07 0 0112 20c-7 0-11-8-11-8a18.45 18.45 0 015.06-5.94M9.9 4.24A9.12 9.12 0 0112 4c7 0 11 8 11 8a18.5 18.5 0 01-2.16 3.19m-6.72-1.07a3 3 0 11-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line>';
 
+    const btnOpen = document.getElementById('btn-open');
+    const btnFileMenu = document.getElementById('btn-file-menu');
+    const fileDropdown = document.getElementById('file-dropdown');
+    const toolbarMain = document.getElementById('toolbar-main');
+    const contextStrip = document.getElementById('context-strip');
     const btnScale = document.getElementById('btn-scale'), btnSetScale = document.getElementById('btn-set-scale');
-    const btnDrag = document.getElementById('btn-drag'), btnSelect = document.getElementById('btn-multi-select');
+    const btnSelect = document.getElementById('btn-select');
     const btnMeasure = document.getElementById('btn-measure'), btnNewCable = document.getElementById('btn-new-cable'), btnConnect = document.getElementById('btn-connect'), btnDelete = document.getElementById('btn-delete'), selectCableType = document.getElementById('cable-type-select');
     const btnWireway = document.getElementById('btn-wireway'), btnNewWireway = document.getElementById('btn-new-wireway');
     const CABLE_TYPES = Object.assign(Object.create(null), { 'default': { color: '#f5bde6', name: 'Default' }, 'cat5e': { color: '#8aadf4', name: 'Cat5e' }, 'cat6': { color: '#a6da95', name: 'Cat6' }, 'cat6a': { color: '#c6a0f6', name: 'Cat6a' }, 'fiber': { color: '#f5a97f', name: 'Fiber' }, 'power': { color: '#ed8796', name: 'Power' } });
-    const btnUndo = document.getElementById('btn-undo'), btnClear = document.getElementById('btn-clear');
+    const btnUndo = document.getElementById('btn-undo'), btnRedo = document.getElementById('btn-redo'), btnClear = document.getElementById('btn-clear');
     const btnExport = document.getElementById('btn-export'), btnExportPlan = document.getElementById('btn-export-plan');
+    const btnLayers = document.getElementById('btn-toggle-layers'), btnGrid = document.getElementById('btn-snap-grid');
     const measurements = document.getElementById('measurements'), canvasContainer = document.getElementById('canvas-container');
     const canvas = document.getElementById('canvas'), ctx = canvas.getContext('2d');
     const contextMenu = document.getElementById('context-menu');
@@ -223,6 +241,7 @@ const i18n = {
 
     const STORAGE_KEY = 'measurer_workspace';
     const STORAGE_IMG_KEY = 'measurer_workspace_img';
+    const DRAG_THRESHOLD_PX = 4;
     let img = new Image();
     let mode = 'none', connectState = { devA: null, portA: null, points: [] }, scalePoints = [], cables = [{ type: 'cat6', points: [] }], devices = [], actionHistory = [], redoHistory = [];
     const MAX_HISTORY = 100;
@@ -241,6 +260,8 @@ const i18n = {
 
     let cameraX = 0, cameraY = 0, zoom = 1, isPanning = false, panStartX = 0, panStartY = 0;
     let isPanningGrid = false, gridPanStartX = 0, gridPanStartY = 0;
+    let isSpacePressed = false;
+    let downClientX = 0, downClientY = 0;
     let draggedPoint = null, activePlaceDevice = null, activeContextMenuTarget = null, hasDragged = false;
     let dragOffsetX = 0, dragOffsetY = 0;
     let lastPinchDistance = null;
@@ -277,6 +298,40 @@ const i18n = {
 
     function updateUndoButton() {
         btnUndo.disabled = actionHistory.length === 0;
+        btnRedo.disabled = redoHistory.length === 0;
+    }
+
+    function setWorkspaceEnabled(enabled) {
+        btnSelect.disabled = !enabled;
+        btnScale.disabled = !enabled;
+        btnMeasure.disabled = !enabled;
+        btnNewCable.disabled = !enabled;
+        btnWireway.disabled = !enabled;
+        btnNewWireway.disabled = !enabled;
+        btnConnect.disabled = !enabled;
+        btnDelete.disabled = !enabled;
+        selectCableType.disabled = !enabled;
+        btnClear.disabled = !enabled;
+        btnExport.disabled = !enabled;
+        btnExportPlan.disabled = !enabled;
+        btnLayers.disabled = !enabled;
+        btnGrid.disabled = !enabled;
+    }
+
+    function updateContextualUI() {
+        const hasImg = !!img.src;
+        const showSetScale = hasImg && (mode === 'scale' || (scalePoints.length === 2 && pixelsPerMeter === null));
+        btnSetScale.classList.toggle('hidden', !showSetScale);
+        btnSetScale.disabled = !(scalePoints.length === 2 && pixelsPerMeter === null);
+
+        const showCableType = hasImg && (mode === 'measure' || mode === 'connect');
+        const showNewCable = hasImg && mode === 'measure';
+        const showNewWireway = hasImg && mode === 'wireway';
+
+        selectCableType.classList.toggle('hidden', !showCableType);
+        btnNewCable.classList.toggle('hidden', !showNewCable);
+        btnNewWireway.classList.toggle('hidden', !showNewWireway);
+        contextStrip.classList.toggle('hidden', !(showCableType || showNewCable || showNewWireway));
     }
 
     function pushUndoSnapshot(snapshot) {
@@ -300,8 +355,8 @@ const i18n = {
         activeCableIndex = Math.max(0, Math.min(snap.activeCableIndex ?? (cables.length - 1), cables.length - 1));
         activeWirewayIndex = Math.max(0, Math.min(snap.activeWirewayIndex ?? (wireways.length - 1), wireways.length - 1));
         selectedDeviceIds.clear();
-        btnSetScale.disabled = !(scalePoints.length === 2 && pixelsPerMeter === null);
         updateUndoButton();
+        updateContextualUI();
     }
 
     // --- SMART CABLE PORT CLEANUP ---
@@ -344,7 +399,6 @@ const i18n = {
     // --- MÓDVÁLTÁS ---
     const MODE_BUTTONS = Object.assign(Object.create(null), {
         scale: btnScale,
-        drag: btnDrag,
         select: btnSelect,
         measure: btnMeasure,
         wireway: btnWireway,
@@ -357,7 +411,7 @@ const i18n = {
         Object.values(MODE_BUTTONS).forEach(b => b.classList.remove('active'));
         btnNewCable.classList.remove('active');
         btnNewWireway.classList.remove('active');
-        canvasContainer.classList.remove('delete-mode', 'drag-mode', 'select-mode');
+        canvasContainer.classList.remove('delete-mode', 'select-mode');
         canvasContainer.style.cursor = '';
 
         if (activePlaceDevice) {
@@ -376,14 +430,14 @@ const i18n = {
             MODE_BUTTONS[newMode].classList.add('active');
         }
         if (newMode === 'delete') canvasContainer.classList.add('delete-mode');
-        else if (newMode === 'drag') canvasContainer.classList.add('drag-mode');
         else if (newMode === 'select') canvasContainer.classList.add('select-mode');
+
+        updateContextualUI();
     }
 
     // --- TÉMA ÉS NYELV ---
     function updateThemeUI() {
         document.body.setAttribute('data-theme', theme);
-        document.getElementById('theme-text').innerText = theme === 'light' ? t('themeDark') : t('themeLight');
         document.getElementById('theme-icon').innerHTML = theme === 'light' ? ICON_MOON : ICON_SUN;
         cachedCanvasBg = getComputedStyle(document.body).getPropertyValue('--canvas-bg').trim() || '#ccd0da';
     }
@@ -421,11 +475,13 @@ const i18n = {
             if (activePlaceDevice === item.dataset.type) {
                 activePlaceDevice = null;
                 item.classList.remove('active-place');
+                setMode('select');
             } else {
                 setMode('none');
                 activePlaceDevice = item.dataset.type;
                 item.classList.add('active-place');
             }
+            redraw();
         });
     });
 
@@ -463,9 +519,8 @@ const i18n = {
 
         actionHistory = [];
         redoHistory = [];
-        btnScale.disabled = false; btnExport.disabled = false; btnExportPlan.disabled = false;
-        btnSetScale.disabled = !(scalePoints.length === 2 && pixelsPerMeter === null);
-        btnMeasure.disabled = btnNewCable.disabled = btnConnect.disabled = btnDelete.disabled = btnClear.disabled = selectCableType.disabled = btnDrag.disabled = btnSelect.disabled = btnWireway.disabled = btnNewWireway.disabled = false;
+        setWorkspaceEnabled(!!img.src);
+        setMode(img.src ? 'select' : 'none');
         updateUndoButton();
         if (resetCamera && img.width > 0 && img.height > 0) {
             const zVal = Number(data.zoom);
@@ -577,12 +632,11 @@ const i18n = {
                 restoreState(pendingPlanData, true);
                 pendingPlanData = null;
             } else {
-                scalePoints = []; cables = [{ type: selectCableType.value || 'cat6', points: [] }]; devices = []; wireways = [{ points: [] }]; actionHistory = []; redoHistory = []; activeCableIndex = 0; activeWirewayIndex = 0; pixelsPerMeter = null; setMode('none');
+                scalePoints = []; cables = [{ type: selectCableType.value || 'cat6', points: [] }]; devices = []; wireways = [{ points: [] }]; actionHistory = []; redoHistory = []; activeCableIndex = 0; activeWirewayIndex = 0; pixelsPerMeter = null;
                 zoom = Math.min(canvasCssW / img.width, canvasCssH / img.height) * 0.95;
                 cameraX = (canvasCssW - img.width * zoom) / 2; cameraY = (canvasCssH - img.height * zoom) / 2;
-                btnScale.disabled = false; btnExport.disabled = false; btnExportPlan.disabled = false;
-                btnSetScale.disabled = true;
-                btnMeasure.disabled = btnNewCable.disabled = btnConnect.disabled = btnDelete.disabled = btnClear.disabled = selectCableType.disabled = btnDrag.disabled = btnSelect.disabled = btnWireway.disabled = btnNewWireway.disabled = false;
+                setWorkspaceEnabled(true);
+                setMode('select');
                 updateUndoButton();
             }
             redraw();
@@ -848,8 +902,25 @@ const i18n = {
         contextMenu.style.top = e.clientY + 'px';
     });
 
+    function closeFileDropdown() {
+        fileDropdown.classList.remove('open');
+        btnFileMenu.setAttribute('aria-expanded', 'false');
+    }
+
+    btnOpen.addEventListener('click', () => {
+        const uploadInput = document.getElementById('upload');
+        if (uploadInput) uploadInput.click();
+    });
+
+    btnFileMenu.addEventListener('click', e => {
+        e.stopPropagation();
+        const isOpen = fileDropdown.classList.toggle('open');
+        btnFileMenu.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
     window.addEventListener('click', e => {
         if (!e.target.closest('#context-menu')) contextMenu.style.display = 'none';
+        if (!e.target.closest('#file-menu-wrap')) closeFileDropdown();
     });
 
     function renameDevice(d) {
@@ -893,6 +964,21 @@ const i18n = {
     window.addEventListener('keydown', e => {
         const tag = e.target.tagName;
         if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || e.target.isContentEditable) {
+            if (e.key === 'Escape' && document.getElementById('switch-modal-overlay').classList.contains('open')) {
+                e.preventDefault();
+                closeSwModal();
+            }
+            return;
+        }
+
+        // Space: Pan camera while held
+        if (e.code === 'Space' && !e.ctrlKey && !e.metaKey && !e.altKey) {
+            if (document.getElementById('switch-modal-overlay').classList.contains('open')) return;
+            e.preventDefault();
+            if (!isSpacePressed) {
+                isSpacePressed = true;
+                canvasContainer.classList.add('space-pan');
+            }
             return;
         }
 
@@ -933,19 +1019,39 @@ const i18n = {
             return;
         }
 
-        // Escape: clear modes/selections
+        // Enter: Finish current cable or wire-way path
+        if (e.key === 'Enter' && (mode === 'measure' || mode === 'wireway')) {
+            e.preventDefault();
+            finishActivePath();
+            return;
+        }
+
+        // Escape: close popups/modals or return to default Select mode
         if (e.key === 'Escape' || e.key === 'Esc') {
             e.preventDefault();
-            if (activePlaceDevice || mode !== 'none' || selectedDeviceIds.size > 0) {
-                setMode('none');
+            if (fileDropdown.classList.contains('open')) {
+                closeFileDropdown();
+                return;
             }
+            if (document.getElementById('switch-modal-overlay').classList.contains('open')) {
+                closeSwModal();
+                return;
+            }
+            if (mode === 'connect' && connectState.devA) {
+                connectState = { devA: null, portA: null, points: [] };
+                hidePortPopup();
+                redraw();
+                return;
+            }
+            selectedDeviceIds.clear();
+            setMode(img.src ? 'select' : 'none');
             redraw();
             return;
         }
 
-        // Mode Keys: S, D, V, M, N, C, E, W, Q
+        // Mode Keys: S, D/V, M, N, C, E, W, Q
         const MODE_SHORTCUTS = Object.assign(Object.create(null), {
-            s: btnScale, d: btnDrag, v: btnSelect, m: btnMeasure,
+            s: btnScale, d: btnSelect, v: btnSelect, m: btnMeasure,
             n: btnNewCable, c: btnConnect, e: btnDelete, w: btnWireway, q: btnNewWireway
         });
         const shortcutBtn = MODE_SHORTCUTS[e.key.toLowerCase()];
@@ -964,6 +1070,20 @@ const i18n = {
                 e.preventDefault();
                 deleteTarget(activeContextMenuTarget);
             }
+        }
+    });
+
+    window.addEventListener('keyup', e => {
+        if (e.code === 'Space' && isSpacePressed) {
+            isSpacePressed = false;
+            canvasContainer.classList.remove('space-pan');
+        }
+    });
+
+    window.addEventListener('blur', () => {
+        if (isSpacePressed) {
+            isSpacePressed = false;
+            canvasContainer.classList.remove('space-pan');
         }
     });
 
@@ -1167,14 +1287,22 @@ const i18n = {
     function handleStart(e, isTouch) {
         if (!img.src || contextMenu.style.display === 'flex') return;
         const wPos = getWorldPos(e), hov = findHoveredPoint(wPos), btn = isTouch ? 0 : e.button;
+        downClientX = isTouch ? e.touches[0].clientX : e.clientX;
+        downClientY = isTouch ? e.touches[0].clientY : e.clientY;
         hasDragged = false;
 
-        if (e.shiftKey && img.src) {
+        if (btn === 2 || btn === 1 || (btn === 0 && isSpacePressed)) {
+            isPanning = true;
+            panStartX = downClientX - cameraX;
+            panStartY = downClientY - cameraY;
+            canvasContainer.classList.add('grabbing');
+            return;
+        }
+
+        if (snapToGrid && btn === 0 && !hov && (e.altKey || (e.shiftKey && selectedDeviceIds.size === 0))) {
             isPanningGrid = true;
-            const clientX = isTouch ? e.touches[0].clientX : e.clientX;
-            const clientY = isTouch ? e.touches[0].clientY : e.clientY;
-            gridPanStartX = clientX - gridOffsetX * zoom;
-            gridPanStartY = clientY - gridOffsetY * zoom;
+            gridPanStartX = downClientX - gridOffsetX * zoom;
+            gridPanStartY = downClientY - gridOffsetY * zoom;
             return;
         }
 
@@ -1229,120 +1357,6 @@ const i18n = {
             return;
         }
 
-        if (mode === 'select' && btn === 0) {
-            if (hov && hov.type === 'device') {
-                const clickedDev = devices[hov.index];
-                if (!selectedDeviceIds.has(clickedDev.id)) {
-                    if (!e.shiftKey && !e.ctrlKey) {
-                        selectedDeviceIds.clear();
-                    }
-                    selectedDeviceIds.add(clickedDev.id);
-                } else {
-                    if (e.shiftKey || e.ctrlKey) {
-                        selectedDeviceIds.delete(clickedDev.id);
-                        redraw();
-                        return;
-                    }
-                }
-                
-                pendingDragSnapshot = captureStateSnapshot();
-                draggedPoint = { type: 'multi-move' };
-                wStartPos = wPos;
-                selectedDeviceOrigPositions = Object.create(null);
-                selectedDeviceIds.forEach(id => {
-                    const dev = devices.find(x => x.id === id);
-                    if (dev) {
-                        selectedDeviceOrigPositions[id] = { x: dev.x, y: dev.y };
-                    }
-                });
-                redraw();
-                return;
-            } else {
-                if (!e.shiftKey && !e.ctrlKey) {
-                    selectedDeviceIds.clear();
-                }
-                draggedPoint = { type: 'selection-marquee' };
-                selectionStartPos = wPos;
-                selectionBox = { x1: wPos.x, y1: wPos.y, x2: wPos.x, y2: wPos.y };
-                redraw();
-                return;
-            }
-        }
-
-        if (btn === 2 || btn === 1 || (btn === 0 && e.ctrlKey && mode !== 'select') || (!hov && mode === 'none' && !activePlaceDevice)) {
-            isPanning = true; panStartX = (isTouch ? e.touches[0].clientX : e.clientX) - cameraX; panStartY = (isTouch ? e.touches[0].clientY : e.clientY) - cameraY;
-            return;
-        }
-
-        // In measure/scale mode, don't intercept device clicks — let them add points normally.
-        if (mode === 'drag' && btn === 0) {
-            const rackHit = getRackEdgeHit(wPos);
-            if (rackHit) {
-                pendingDragSnapshot = captureStateSnapshot();
-                draggedPoint = { type: 'rack-resize', ...rackHit };
-                redraw();
-                return;
-            }
-        }
-
-        // In measure/scale mode, don't intercept device clicks — let them add points normally.
-        // Grab devices/cables as draggedPoints if in 'drag' mode (or scale points in scale mode).
-        // Also grab devices in 'none' mode for click/tap to open switch modal (but no movement).
-        if (hov) {
-            let canDragOrSelect = (mode === 'drag') || 
-                                  (mode === 'scale' && hov.type === 'scale') || 
-                                  (hov.type === 'device' && mode === 'none');
-            
-            if (canDragOrSelect && !((hov.type === 'device' && mode !== 'none' && mode !== 'drag') || activePlaceDevice)) {
-                pendingDragSnapshot = captureStateSnapshot();
-                draggedPoint = hov;
-                const hovPos = hov.type === 'device' ? getDeviceDrawPos(hov.index) : hov.array[hov.index];
-                dragOffsetX = hovPos.x - wPos.x;
-                dragOffsetY = hovPos.y - wPos.y;
-                if (hov.type === 'cable') { 
-                    activeCableIndex = hov.cableIndex; 
-                }
-                if (hov.type === 'wireway') {
-                    activeWirewayIndex = hov.wirewayIndex;
-                }
-                redraw();
-                return;
-            }
-        } else if (mode === 'drag') {
-            for (let c = cables.length - 1; c >= 0; c--) {
-                const cableObj = cables[c];
-                const fullCable = getCablePoints(cableObj) || cableObj.points;
-                for (let i = 1; i < fullCable.length; i++) {
-                    if (distToSegment(wPos, fullCable[i-1], fullCable[i]) < 10 / zoom) {
-                        pushUndoSnapshot();
-                        const insertIdx = ('fromDev' in cableObj) ? i - 1 : i;
-                        cableObj.points.splice(insertIdx, 0, {x: wPos.x, y: wPos.y});
-                        draggedPoint = { array: cableObj.points, index: insertIdx, type: 'cable', cableIndex: c };
-                        activeCableIndex = c;
-                        redraw();
-                        autoSave();
-                        return;
-                    }
-                }
-            }
-            for (let w = wireways.length - 1; w >= 0; w--) {
-                let wirewayObj = wireways[w];
-                let points = wirewayObj.points;
-                for (let i = 1; i < points.length; i++) {
-                    const p1 = points[i-1], p2 = points[i];
-                    if (distToSegment(wPos, p1, p2) < 10 / zoom) {
-                        pushUndoSnapshot();
-                        wirewayObj.points.splice(i, 0, {x: wPos.x, y: wPos.y});
-                        draggedPoint = { array: wirewayObj.points, index: i, type: 'wireway', wirewayIndex: w };
-                        activeWirewayIndex = w;
-                        redraw();
-                        autoSave();
-                        return;
-                    }
-                }
-            }
-        }
-
         if (activePlaceDevice && btn === 0) {
             pushUndoSnapshot();
             let p = applyGridSnap(wPos);
@@ -1351,24 +1365,171 @@ const i18n = {
             autoSave();
             return;
         }
-        
-        if (mode === 'scale' && scalePoints.length < 2) {
-            pushUndoSnapshot();
-            scalePoints.push(applyGridSnap(wPos));
-            if (scalePoints.length === 2) btnSetScale.disabled = false;
+
+        if (mode === 'select' && btn === 0) {
+            if (e.ctrlKey && !hov) {
+                isPanning = true;
+                panStartX = downClientX - cameraX;
+                panStartY = downClientY - cameraY;
+                canvasContainer.classList.add('grabbing');
+                return;
+            }
+
+            const beginDeviceInteraction = devIndex => {
+                const clickedDev = devices[devIndex];
+                const isMod = e.shiftKey || e.ctrlKey || e.metaKey;
+                const wasAlreadyMultiSelected = selectedDeviceIds.has(clickedDev.id) && selectedDeviceIds.size > 1;
+                if (!selectedDeviceIds.has(clickedDev.id)) {
+                    if (!isMod) selectedDeviceIds.clear();
+                    selectedDeviceIds.add(clickedDev.id);
+                } else if (isMod) {
+                    selectedDeviceIds.delete(clickedDev.id);
+                    redraw();
+                    return;
+                }
+
+                pendingDragSnapshot = captureStateSnapshot();
+                draggedPoint = {
+                    type: 'multi-move',
+                    clickedIndex: devIndex,
+                    openModalOnClick: !isMod && !wasAlreadyMultiSelected,
+                    collapseOnClick: !isMod && wasAlreadyMultiSelected
+                };
+                wStartPos = wPos;
+                selectedDeviceOrigPositions = Object.create(null);
+                selectedDeviceIds.forEach(id => {
+                    const dev = devices.find(x => x.id === id);
+                    if (dev) selectedDeviceOrigPositions[id] = { x: dev.x, y: dev.y };
+                });
+                redraw();
+            };
+
+            // 1. Non-rack devices take priority (including devices stacked inside a rack)
+            if (hov && hov.type === 'device' && devices[hov.index].type !== 'rack') {
+                beginDeviceInteraction(hov.index);
+                return;
+            }
+
+            // 2. Rack edge / corner resize
+            const rackHit = getRackEdgeHit(wPos);
+            if (rackHit) {
+                pendingDragSnapshot = captureStateSnapshot();
+                draggedPoint = { type: 'rack-resize', ...rackHit };
+                redraw();
+                return;
+            }
+
+            // 3. Rack body click / drag
+            if (hov && hov.type === 'device') {
+                beginDeviceInteraction(hov.index);
+                return;
+            }
+
+            // 4. Existing cable, wireway, or scale point
+            if (hov && (hov.type === 'scale' || hov.type === 'cable' || hov.type === 'wireway')) {
+                selectedDeviceIds.clear();
+                pendingDragSnapshot = captureStateSnapshot();
+                draggedPoint = hov;
+                const hovPos = hov.array[hov.index];
+                dragOffsetX = hovPos.x - wPos.x;
+                dragOffsetY = hovPos.y - wPos.y;
+                if (hov.type === 'cable') activeCableIndex = hov.cableIndex;
+                if (hov.type === 'wireway') activeWirewayIndex = hov.wirewayIndex;
+                redraw();
+                return;
+            }
+
+            // 5. Cable or wireway segment (click selects active run; drag inserts a bend point)
+            for (let c = cables.length - 1; c >= 0; c--) {
+                const cableObj = cables[c];
+                const fullCable = getCablePoints(cableObj) || cableObj.points;
+                for (let i = 1; i < fullCable.length; i++) {
+                    if (distToSegment(wPos, fullCable[i-1], fullCable[i]) < 10 / zoom) {
+                        selectedDeviceIds.clear();
+                        activeCableIndex = c;
+                        pendingDragSnapshot = captureStateSnapshot();
+                        draggedPoint = {
+                            type: 'segment-insert',
+                            kind: 'cable',
+                            cableIndex: c,
+                            insertIndex: ('fromDev' in cableObj) ? i - 1 : i
+                        };
+                        redraw();
+                        return;
+                    }
+                }
+            }
+            for (let w = wireways.length - 1; w >= 0; w--) {
+                const points = wireways[w].points;
+                for (let i = 1; i < points.length; i++) {
+                    if (distToSegment(wPos, points[i-1], points[i]) < 10 / zoom) {
+                        selectedDeviceIds.clear();
+                        activeWirewayIndex = w;
+                        pendingDragSnapshot = captureStateSnapshot();
+                        draggedPoint = {
+                            type: 'segment-insert',
+                            kind: 'wireway',
+                            wirewayIndex: w,
+                            insertIndex: i
+                        };
+                        redraw();
+                        return;
+                    }
+                }
+            }
+
+            // 6. Empty canvas → marquee selection box
+            if (!e.shiftKey && !e.ctrlKey && !e.metaKey) {
+                selectedDeviceIds.clear();
+            }
+            draggedPoint = { type: 'selection-marquee' };
+            selectionStartPos = wPos;
+            selectionBox = { x1: wPos.x, y1: wPos.y, x2: wPos.x, y2: wPos.y };
             redraw();
-            autoSave();
-        } 
-        else if (mode === 'measure') {
+            return;
+        }
+
+        if (mode === 'scale' && btn === 0) {
+            if (hov && hov.type === 'scale') {
+                pendingDragSnapshot = captureStateSnapshot();
+                draggedPoint = hov;
+                dragOffsetX = hov.array[hov.index].x - wPos.x;
+                dragOffsetY = hov.array[hov.index].y - wPos.y;
+                redraw();
+                return;
+            }
+            if (scalePoints.length < 2) {
+                pushUndoSnapshot();
+                scalePoints.push(applyGridSnap(wPos));
+                updateContextualUI();
+                redraw();
+                autoSave();
+            }
+            return;
+        }
+
+        if (mode === 'measure' && btn === 0) {
+            const pts = cables[activeCableIndex].points;
+            const p = applyGridSnap(wPos);
+            if (pts.length > 0 && Math.hypot(pts[pts.length - 1].x - p.x, pts[pts.length - 1].y - p.y) < 2 / zoom) {
+                return;
+            }
             pushUndoSnapshot();
-            cables[activeCableIndex].points.push(applyGridSnap(wPos));
+            pts.push(p);
             btnNewCable.classList.remove('active');
             redraw();
             autoSave();
+            return;
         }
-        else if (mode === 'wireway') {
+
+        if (mode === 'wireway' && btn === 0) {
+            const pts = wireways[activeWirewayIndex].points;
+            const p = applyGridSnap(wPos);
+            if (pts.length > 0 && Math.hypot(pts[pts.length - 1].x - p.x, pts[pts.length - 1].y - p.y) < 2 / zoom) {
+                return;
+            }
             pushUndoSnapshot();
-            wireways[activeWirewayIndex].points.push(applyGridSnap(wPos));
+            pts.push(p);
             btnNewWireway.classList.remove('active');
             redraw();
             autoSave();
@@ -1378,30 +1539,62 @@ const i18n = {
     function handleMove(e, isTouch) {
         if (!img.src) return;
         const wPos = getWorldPos(e);
+        const clientX = isTouch ? e.touches[0].clientX : e.clientX;
+        const clientY = isTouch ? e.touches[0].clientY : e.clientY;
         lastMouseWorldPos = wPos;
 
         if (isPanningGrid) {
             hasDragged = true;
-            const clientX = isTouch ? e.touches[0].clientX : e.clientX;
-            const clientY = isTouch ? e.touches[0].clientY : e.clientY;
             gridOffsetX = (clientX - gridPanStartX) / zoom;
             gridOffsetY = (clientY - gridPanStartY) / zoom;
             scheduleRedraw();
             return;
         }
 
-        if (isPanning) { 
-            hasDragged = true;
-            cameraX = (isTouch ? e.touches[0].clientX : e.clientX) - panStartX; cameraY = (isTouch ? e.touches[0].clientY : e.clientY) - panStartY; scheduleRedraw(); return; 
-        }
-        
-        if (draggedPoint) {
-            if (draggedPoint.type === 'selection-marquee') {
+        if (isPanning) {
+            if (!hasDragged && Math.hypot(clientX - downClientX, clientY - downClientY) >= DRAG_THRESHOLD_PX) {
                 hasDragged = true;
-                let rawPos = getWorldPos(e);
-                selectionBox = { x1: selectionStartPos.x, y1: selectionStartPos.y, x2: rawPos.x, y2: rawPos.y };
-                
-                if (!e.shiftKey && !e.ctrlKey) {
+                contextMenu.style.display = 'none';
+            }
+            if (hasDragged) {
+                cameraX = clientX - panStartX;
+                cameraY = clientY - panStartY;
+                scheduleRedraw();
+            }
+            return;
+        }
+
+        if (draggedPoint) {
+            if (!hasDragged) {
+                if (Math.hypot(clientX - downClientX, clientY - downClientY) < DRAG_THRESHOLD_PX) {
+                    return;
+                }
+                hasDragged = true;
+            }
+
+            if (draggedPoint.type === 'segment-insert') {
+                let pos = applyGridSnap(wPos);
+                if (draggedPoint.kind === 'cable') {
+                    pos = getSnappedPos(pos);
+                    const cableObj = cables[draggedPoint.cableIndex];
+                    cableObj.points.splice(draggedPoint.insertIndex, 0, { x: pos.x, y: pos.y });
+                    draggedPoint = { array: cableObj.points, index: draggedPoint.insertIndex, type: 'cable', cableIndex: draggedPoint.cableIndex };
+                } else {
+                    const wirewayObj = wireways[draggedPoint.wirewayIndex];
+                    wirewayObj.points.splice(draggedPoint.insertIndex, 0, { x: pos.x, y: pos.y });
+                    draggedPoint = { array: wirewayObj.points, index: draggedPoint.insertIndex, type: 'wireway', wirewayIndex: draggedPoint.wirewayIndex };
+                }
+                dragOffsetX = 0;
+                dragOffsetY = 0;
+                canvasContainer.classList.add('grabbing');
+                scheduleRedraw();
+                return;
+            }
+
+            if (draggedPoint.type === 'selection-marquee') {
+                selectionBox = { x1: selectionStartPos.x, y1: selectionStartPos.y, x2: wPos.x, y2: wPos.y };
+
+                if (!e.shiftKey && !e.ctrlKey && !e.metaKey) {
                     selectedDeviceIds.clear();
                 }
                 const xMin = Math.min(selectionBox.x1, selectionBox.x2);
@@ -1416,16 +1609,14 @@ const i18n = {
                 scheduleRedraw();
                 return;
             }
+
             if (draggedPoint.type === 'multi-move') {
-                hasDragged = true;
                 canvasContainer.classList.add('grabbing');
                 let rawPos = getWorldPos(e);
-                if (isTouch) {
-                    rawPos.y -= 40 / zoom;
-                }
+                if (isTouch) rawPos.y -= 40 / zoom;
                 const dx = rawPos.x - wStartPos.x;
                 const dy = rawPos.y - wStartPos.y;
-                
+
                 selectedDeviceIds.forEach(id => {
                     const dev = devices.find(x => x.id === id);
                     if (dev && selectedDeviceOrigPositions[id]) {
@@ -1440,74 +1631,68 @@ const i18n = {
             }
 
             if (draggedPoint.type === 'rack-resize') {
-                hasDragged = true;
                 let rawPos = getWorldPos(e);
-                if (isTouch) {
-                    rawPos.y -= 40 / zoom;
-                }
+                if (isTouch) rawPos.y -= 40 / zoom;
                 let pos = applyGridSnap(rawPos);
                 const d = devices[draggedPoint.index];
                 const edges = draggedPoint.edges;
                 const fixed = draggedPoint.fixed;
-                
+
                 canvasContainer.style.cursor = getResizeCursor(edges);
                 canvasContainer.classList.add('grabbing');
-                
+
                 if (edges.left) {
-                    const newLeft = pos.x;
-                    const newWidth = Math.max(30, fixed.x - newLeft);
+                    const newWidth = Math.max(30, fixed.x - pos.x);
                     d.width = newWidth;
                     d.x = fixed.x - newWidth / 2;
                 } else if (edges.right) {
-                    const newRight = pos.x;
-                    const newWidth = Math.max(30, newRight - fixed.x);
+                    const newWidth = Math.max(30, pos.x - fixed.x);
                     d.width = newWidth;
                     d.x = fixed.x + newWidth / 2;
                 }
-                
+
                 if (edges.top) {
-                    const newTop = pos.y;
-                    const newHeight = Math.max(30, fixed.y - newTop);
+                    const newHeight = Math.max(30, fixed.y - pos.y);
                     d.height = newHeight;
                     d.y = fixed.y - newHeight / 2;
                 } else if (edges.bottom) {
-                    const newBottom = pos.y;
-                    const newHeight = Math.max(30, newBottom - fixed.y);
+                    const newHeight = Math.max(30, pos.y - fixed.y);
                     d.height = newHeight;
                     d.y = fixed.y + newHeight / 2;
                 }
-                
+
                 scheduleRedraw();
                 return;
             }
 
-            let canDrag = (mode === 'drag') || (mode === 'scale' && draggedPoint.type === 'scale');
+            const canDrag = (mode === 'select') || (mode === 'scale' && draggedPoint.type === 'scale');
             if (canDrag) {
-                hasDragged = true;
                 canvasContainer.classList.add('grabbing');
                 let rawPos = getWorldPos(e);
-                
-                // Offset point above finger on touch devices to improve visibility
-                if (isTouch) {
-                    rawPos.y -= 40 / zoom;
-                }
-                
+                if (isTouch) rawPos.y -= 40 / zoom;
                 rawPos.x += dragOffsetX;
                 rawPos.y += dragOffsetY;
-                
+
                 let pos = applyGridSnap(rawPos);
-                
                 if (draggedPoint.type === 'cable') {
                     pos = getSnappedPos(pos);
                 }
-                draggedPoint.array[draggedPoint.index].x = pos.x; 
+                draggedPoint.array[draggedPoint.index].x = pos.x;
                 draggedPoint.array[draggedPoint.index].y = pos.y;
-                if (draggedPoint.type === 'scale' && pixelsPerMeter) { pixelsPerMeter = null; mode = 'scale'; btnScale.classList.add('active'); btnSetScale.disabled = false; }
+                if (draggedPoint.type === 'scale' && pixelsPerMeter) {
+                    pixelsPerMeter = null;
+                    setMode('scale');
+                }
                 scheduleRedraw();
             }
-        } else if (mode === 'drag') {
-            const rackHit = getRackEdgeHit(wPos);
-            canvasContainer.style.cursor = rackHit ? getResizeCursor(rackHit.edges) : '';
+        } else if (mode === 'select' && !isSpacePressed) {
+            const hov = findHoveredPoint(wPos);
+            if (hov && hov.type === 'device' && devices[hov.index].type !== 'rack') {
+                canvasContainer.style.cursor = 'pointer';
+            } else {
+                const rackHit = getRackEdgeHit(wPos);
+                canvasContainer.style.cursor = rackHit ? getResizeCursor(rackHit.edges) : '';
+            }
         } else if (mode === 'connect' && connectState.devA) {
             scheduleRedraw();
         }
@@ -1517,41 +1702,35 @@ const i18n = {
         isPanning = false;
         isPanningGrid = false;
         canvasContainer.classList.remove('grabbing');
-        
-        if (mode === 'select') {
-            if (draggedPoint) {
-                if (draggedPoint.type === 'selection-marquee') {
-                    selectionBox = null;
-                    selectionStartPos = null;
+
+        if (draggedPoint) {
+            if (draggedPoint.type === 'selection-marquee') {
+                selectionBox = null;
+                selectionStartPos = null;
+            } else if (!hasDragged && draggedPoint.type === 'multi-move') {
+                const dev = devices[draggedPoint.clickedIndex];
+                const shouldOpen = draggedPoint.openModalOnClick;
+                const shouldCollapse = draggedPoint.collapseOnClick;
+                draggedPoint = null;
+                pendingDragSnapshot = null;
+                if (shouldOpen && dev) {
+                    redraw();
+                    openSwitchModal(dev);
+                    return;
                 }
-                if (draggedPoint.type === 'multi-move' && hasDragged) {
-                    if (pendingDragSnapshot) {
-                        pushUndoSnapshot(pendingDragSnapshot);
-                    }
-                    autoSave();
-                } else if (hasDragged) {
-                    autoSave();
+                if (shouldCollapse && dev) {
+                    selectedDeviceIds.clear();
+                    selectedDeviceIds.add(dev.id);
+                    redraw();
+                    return;
                 }
             }
-            draggedPoint = null;
-            pendingDragSnapshot = null;
-            redraw();
-            return;
         }
-        
-        // Single click (no drag) on a device → open device modal
-        if (draggedPoint && !hasDragged && draggedPoint.type === 'device' && !activePlaceDevice && mode === 'none') {
-            const dev = devices[draggedPoint.index];
-            draggedPoint = null;
-            pendingDragSnapshot = null;
-            redraw();
-            openSwitchModal(dev);
-            return;
-        }
+
         if (hasDragged && pendingDragSnapshot) {
             pushUndoSnapshot(pendingDragSnapshot);
         }
-        if (draggedPoint || hasDragged) autoSave();
+        if (hasDragged) autoSave();
         draggedPoint = null;
         pendingDragSnapshot = null;
         redraw();
@@ -1560,6 +1739,11 @@ const i18n = {
     canvasContainer.addEventListener('mousedown', e => handleStart(e, false));
     canvasContainer.addEventListener('mousemove', e => handleMove(e, false));
     window.addEventListener('mouseup', handleEnd);
+    canvasContainer.addEventListener('dblclick', () => {
+        if (mode === 'measure' || mode === 'wireway') {
+            finishActivePath();
+        }
+    });
 
     // Single-click on a switch device opens the switch panel modal (handled in handleEnd)
 
@@ -1692,7 +1876,36 @@ const i18n = {
         if (autoSaveTimer !== null) autoSave();
     });
 
-    // Gombok logika & UNDO
+    function finishActivePath() {
+        if (mode === 'measure') {
+            if (cables[activeCableIndex] && cables[activeCableIndex].points.length > 0) {
+                pushUndoSnapshot();
+                cables.push({ type: selectCableType.value || 'cat6', points: [] });
+                activeCableIndex = cables.length - 1;
+                btnNewCable.classList.add('active');
+                autoSave();
+            }
+            redraw();
+        } else if (mode === 'wireway') {
+            if (wireways[activeWirewayIndex] && wireways[activeWirewayIndex].points.length > 0) {
+                pushUndoSnapshot();
+                wireways.push({ points: [] });
+                activeWirewayIndex = wireways.length - 1;
+                btnNewWireway.classList.add('active');
+                autoSave();
+            }
+            redraw();
+        }
+    }
+
+    selectCableType.addEventListener('change', () => {
+        const activeCable = cables[activeCableIndex];
+        if (activeCable && activeCable.points.length === 0 && !('fromDev' in activeCable)) {
+            activeCable.type = selectCableType.value || 'cat6';
+        }
+    });
+
+    // Gombok logika & UNDO / REDO
     btnSetScale.addEventListener('click', () => {
         if (scalePoints.length !== 2) return;
         const val = prompt(t('promptMeter'));
@@ -1701,9 +1914,8 @@ const i18n = {
             if (!isNaN(parsed) && parsed > 0) {
                 pushUndoSnapshot();
                 pixelsPerMeter = Math.hypot(scalePoints[1].x - scalePoints[0].x, scalePoints[1].y - scalePoints[0].y) / parsed;
-                btnSetScale.disabled = true;
-                setMode('none');
-                btnMeasure.disabled = btnNewCable.disabled = btnConnect.disabled = btnDelete.disabled = btnClear.disabled = selectCableType.disabled = btnDrag.disabled = btnSelect.disabled = btnWireway.disabled = btnNewWireway.disabled = false;
+                setWorkspaceEnabled(true);
+                setMode('select');
                 updateUndoButton();
                 redraw();
                 autoSave();
@@ -1714,73 +1926,56 @@ const i18n = {
     });
 
     btnScale.addEventListener('click', () => {
+        if (mode === 'scale' && scalePoints.length === 0 && pixelsPerMeter === null) {
+            setMode('select');
+            redraw();
+            return;
+        }
         if (scalePoints.length > 0 || pixelsPerMeter !== null) pushUndoSnapshot();
         scalePoints = [];
         pixelsPerMeter = null;
-        btnSetScale.disabled = true;
         setMode('scale');
         redraw();
     });
 
     btnMeasure.addEventListener('click', () => {
-        setMode('measure');
+        setMode(mode === 'measure' ? 'select' : 'measure');
         redraw();
     });
 
     btnNewCable.addEventListener('click', () => {
         setMode('measure');
-        if (cables[activeCableIndex].points.length > 0) {
-            pushUndoSnapshot();
-            cables.push({ type: selectCableType.value || 'cat6', points: [] });
-            activeCableIndex = cables.length - 1;
-            btnNewCable.classList.add('active');
-            autoSave();
-        }
-        redraw();
+        finishActivePath();
     });
 
     btnConnect.addEventListener('click', () => {
-        setMode('connect');
+        setMode(mode === 'connect' ? 'select' : 'connect');
         connectState = { devA: null, portA: null, points: [] };
         redraw();
     });
 
     btnDelete.addEventListener('click', () => {
-        if (mode === 'select') {
-            if (selectedDeviceIds.size > 0) {
-                deleteSelectedDevices();
-            }
+        if (mode === 'select' && selectedDeviceIds.size > 0) {
+            deleteSelectedDevices();
             return;
         }
-        setMode(mode === 'delete' ? 'none' : 'delete');
-        redraw();
-    });
-
-    btnDrag.addEventListener('click', () => {
-        setMode(mode === 'drag' ? 'none' : 'drag');
+        setMode(mode === 'delete' ? 'select' : 'delete');
         redraw();
     });
 
     btnSelect.addEventListener('click', () => {
-        setMode(mode === 'select' ? 'none' : 'select');
+        setMode('select');
         redraw();
     });
 
     btnWireway.addEventListener('click', () => {
-        setMode(mode === 'wireway' ? 'none' : 'wireway');
+        setMode(mode === 'wireway' ? 'select' : 'wireway');
         redraw();
     });
 
     btnNewWireway.addEventListener('click', () => {
         setMode('wireway');
-        if (wireways[activeWirewayIndex].points.length > 0) {
-            pushUndoSnapshot();
-            wireways.push({ points: [] });
-            activeWirewayIndex = wireways.length - 1;
-            btnNewWireway.classList.add('active');
-            autoSave();
-        }
-        redraw();
+        finishActivePath();
     });
 
     function deleteSelectedDevices() {
@@ -1813,7 +2008,10 @@ const i18n = {
         autoSave();
     }
 
+    btnRedo.addEventListener('click', performRedo);
+
     btnClear.addEventListener('click', () => {
+        closeFileDropdown();
         if (confirm(t('confirmClear'))) {
             pushUndoSnapshot();
             scalePoints = [];
@@ -1826,13 +2024,14 @@ const i18n = {
             gridOffsetX = 0;
             gridOffsetY = 0;
             selectedDeviceIds.clear();
-            btnSetScale.disabled = true;
+            updateContextualUI();
             redraw();
             autoSave();
         }
     });
 
     btnExportPlan.addEventListener('click', () => {
+        closeFileDropdown();
         if (!img.src) return;
         const data = { scalePoints, cables, devices, wireways, pixelsPerMeter, zoom, cameraX, cameraY, gridOffsetX, gridOffsetY };
         data.imgSrc = img.src;
@@ -1847,6 +2046,7 @@ const i18n = {
     });
 
     btnExport.addEventListener('click', () => {
+        closeFileDropdown();
         if (!img.src) return;
         const prevMode = mode;
         mode = 'export';
@@ -1878,6 +2078,7 @@ const i18n = {
     });
 
     document.getElementById('btn-wipe-storage').addEventListener('click', () => {
+        closeFileDropdown();
         if (!confirm(t('confirmWipeStorage'))) return;
         if (autoSaveTimer !== null) {
             clearTimeout(autoSaveTimer);
@@ -1900,12 +2101,8 @@ const i18n = {
         gridOffsetX = 0;
         gridOffsetY = 0;
         pendingPlanData = null;
+        setWorkspaceEnabled(false);
         setMode('none');
-        btnScale.disabled = true;
-        btnSetScale.disabled = true;
-        btnExport.disabled = true;
-        btnExportPlan.disabled = true;
-        btnClear.disabled = true;
         updateUndoButton();
         document.getElementById('upload').value = '';
         redraw();
@@ -1925,15 +2122,16 @@ const i18n = {
         }
     });
 
-    document.getElementById('btn-toggle-layers').addEventListener('click', () => {
+    btnLayers.addEventListener('click', () => {
         showLayers = !showLayers;
+        btnLayers.classList.toggle('active', showLayers);
         document.getElementById('layers-icon').innerHTML = showLayers ? ICON_EYE : ICON_EYE_OFF;
         redraw();
     });
 
-    document.getElementById('btn-snap-grid').addEventListener('click', (e) => {
+    btnGrid.addEventListener('click', () => {
         snapToGrid = !snapToGrid;
-        e.currentTarget.classList.toggle('active', snapToGrid);
+        btnGrid.classList.toggle('active', snapToGrid);
         redraw();
     });
 
@@ -2043,8 +2241,8 @@ const i18n = {
                 ctx.stroke();
                 ctx.setLineDash([]); // reset line dash
 
-                // Pontok/húzókák kirajzolása wireway vagy drag módban
-                if (mode === 'wireway' || mode === 'drag') {
+                // Pontok/húzókák kirajzolása wireway vagy select módban
+                if ((mode === 'wireway' || mode === 'select') && !isExport) {
                     points.forEach((p, i) => {
                         ctx.globalAlpha = draggedPoint && hasDragged && draggedPoint.type === 'wireway' && draggedPoint.wirewayIndex === wIndex && draggedPoint.index === i && !isExport ? 0.4 : 1.0;
                         ctx.strokeStyle = '#7c7f93';
@@ -2170,7 +2368,7 @@ const i18n = {
                     ctx.textBaseline = 'bottom';
                     ctx.fillText(shortLabel, 0, -rh/2 - 2/zoom);
 
-                    if (mode === 'drag' && !isExport) {
+                    if (mode === 'select' && selectedDeviceIds.has(d.id) && !isExport) {
                         ctx.strokeStyle = '#1e66f5';
                         ctx.lineWidth = 1 / zoom;
                         ctx.setLineDash([4 / zoom, 4 / zoom]);
@@ -2290,10 +2488,9 @@ const i18n = {
             const measKey = `${lang}|${activeCableIndex}|${activeLen.toFixed(2)}|${totalMeters.toFixed(2)}|${activeKeys.map(k => k + ':' + typeLengths[k].toFixed(2)).join(',')}`;
             if (measKey !== lastMeasurementsKey) {
                 lastMeasurementsKey = measKey;
-                const makeMetricSpan = (colorVar, labelText, valueText) => {
+                const makeMetricSpan = (className, labelText, valueText) => {
                     const span = document.createElement('span');
-                    span.style.color = colorVar;
-                    span.style.marginRight = '15px';
+                    span.className = className;
                     span.appendChild(document.createTextNode(labelText + ': '));
                     const b = document.createElement('b');
                     b.textContent = valueText;
@@ -2301,24 +2498,28 @@ const i18n = {
                     return span;
                 };
 
-                const typesWrap = document.createElement('span');
-                typesWrap.style.fontSize = '0.85em';
-                typesWrap.appendChild(document.createTextNode('('));
-                activeKeys.forEach((k, idx) => {
-                    if (idx > 0) typesWrap.appendChild(document.createTextNode(' | '));
-                    const spec = Object.hasOwn(CABLE_TYPES, k) ? CABLE_TYPES[k] : null;
-                    const sp = document.createElement('span');
-                    sp.style.color = spec ? spec.color : '#f5bde6';
-                    sp.textContent = `${spec ? spec.name : k}: ${typeLengths[k].toFixed(2)}m`;
-                    typesWrap.appendChild(sp);
-                });
-                typesWrap.appendChild(document.createTextNode(')'));
+                const nodes = [
+                    makeMetricSpan('meas-active', t('textActive', activeCableIndex + 1), `${activeLen.toFixed(2)} m`),
+                    makeMetricSpan('meas-total', t('textTotal'), `${totalMeters.toFixed(2)} m`)
+                ];
 
-                measurements.replaceChildren(
-                    makeMetricSpan('var(--danger)', t('textActive', activeCableIndex + 1), `${activeLen.toFixed(2)} m`),
-                    makeMetricSpan('var(--success)', t('textTotal'), `${totalMeters.toFixed(2)} m`),
-                    typesWrap
-                );
+                if (activeKeys.length > 0) {
+                    const typesWrap = document.createElement('span');
+                    typesWrap.className = 'meas-types';
+                    typesWrap.appendChild(document.createTextNode('('));
+                    activeKeys.forEach((k, idx) => {
+                        if (idx > 0) typesWrap.appendChild(document.createTextNode(' | '));
+                        const spec = Object.hasOwn(CABLE_TYPES, k) ? CABLE_TYPES[k] : null;
+                        const sp = document.createElement('span');
+                        sp.style.color = spec ? spec.color : '#f5bde6';
+                        sp.textContent = `${spec ? spec.name : k}: ${typeLengths[k].toFixed(2)}m`;
+                        typesWrap.appendChild(sp);
+                    });
+                    typesWrap.appendChild(document.createTextNode(')'));
+                    nodes.push(typesWrap);
+                }
+
+                measurements.replaceChildren(...nodes);
             }
         } else if (lastMeasurementsKey !== '') {
             lastMeasurementsKey = '';
@@ -2347,13 +2548,13 @@ const i18n = {
     loadSavedWorkspace();
     updateLanguageUI();
     document.getElementById('btn-mobile-menu').addEventListener('click', () => {
-        document.getElementById('controls').classList.toggle('open');
+        toolbarMain.classList.toggle('open');
     });
 
-    document.querySelectorAll('#controls button').forEach(btn => {
+    toolbarMain.querySelectorAll('button').forEach(btn => {
         btn.addEventListener('click', () => {
             if (window.innerWidth <= 768) {
-                document.getElementById('controls').classList.remove('open');
+                toolbarMain.classList.remove('open');
             }
         });
     });
@@ -2399,7 +2600,7 @@ const i18n = {
                         dA.ports[connectState.portA].conn = `${dev.type.toUpperCase()} port ${i}`;
                     }
                     dev.ports[i].conn = `${dA ? dA.type.toUpperCase() : '?'} port ${connectState.portA}`;
-                    setMode('none');
+                    setMode('select');
                     redraw(); autoSave();
                 }
             };
