@@ -8,7 +8,7 @@
     <title>Measurer app</title>
     <script type="module" src="./vendor/pdf.min.mjs" integrity="sha384-6MTG6VynDVMfHzijur0VKc9BdrA6HaXHZd+pK6iGWh2acDj3CibR0CRwHizMoy1N"></script>
     <script defer src="./vendor/jspdf.umd.min.js" integrity="sha384-qovJwSBbRDPP5cEjCp8S0UP66wrvnjaa60XMOGzTNanrThcrGfXfnZkvgY8N1KT3"></script>
-    <link rel="stylesheet" href="style.css?v=2.6">
+    <link rel="stylesheet" href="style.css?v=2.7">
 </head>
 <body data-theme="light">
 
@@ -17,19 +17,16 @@
         <button id="btn-mobile-menu" class="icon-btn" title="Menu" data-i18n-title="titleMenu" aria-label="Menu">
             <svg class="icon" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
         </button>
-        <div class="brand">
+        <div class="brand" title="Measurer app">
             <svg class="icon brand-icon" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-            <strong>Measurer</strong>
         </div>
         <input type="file" id="upload" class="visually-hidden" accept="image/png, image/jpeg, image/webp, image/gif, image/bmp, .pdf, .json, .plan, application/pdf, application/json">
-        <button id="btn-open" title="Open Floorplan or .plan (O)" data-i18n-title="titleOpen">
+        <button id="btn-open" class="icon-btn" title="Open Floorplan or .plan (O)" data-i18n-title="titleOpen" aria-label="Open">
             <svg class="icon" viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
-            <span data-i18n="btnOpen">Open</span>
         </button>
         <div class="dropdown" id="file-menu-wrap">
-            <button id="btn-file-menu" aria-haspopup="true" aria-expanded="false" title="File &amp; Storage" data-i18n-title="titleFile">
+            <button id="btn-file-menu" class="icon-btn-wide" aria-haspopup="true" aria-expanded="false" title="File &amp; Storage" data-i18n-title="titleFile" aria-label="File">
                 <svg class="icon" viewBox="0 0 24 24"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
-                <span data-i18n="btnFile">File</span>
                 <svg class="icon chevron-icon" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </button>
             <div id="file-dropdown" class="dropdown-menu" role="menu">
@@ -64,33 +61,26 @@
 
     <div id="toolbar-main">
         <div class="tool-strip">
-            <button id="btn-select" disabled title="Select, Move &amp; Resize (V)" data-i18n-title="titleSelect">
+            <button id="btn-select" class="icon-btn" disabled title="Select, Move &amp; Resize (V)" data-i18n-title="titleSelect" aria-label="Select">
                 <svg class="icon" viewBox="0 0 24 24"><path d="M4 4l7.07 17 2.51-7.39L21 11.07z"></path></svg>
-                <span data-i18n="btnSelect">Select</span>
             </button>
-            <button id="btn-scale" disabled title="Calibrate Scale (S)" data-i18n-title="titleScale">
+            <button id="btn-scale" class="icon-btn" disabled title="Calibrate Scale (S)" data-i18n-title="titleScale" aria-label="Scale">
                 <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="10" width="18" height="4" rx="1"></rect><line x1="6" y1="10" x2="6" y2="12"></line><line x1="10" y1="10" x2="10" y2="14"></line></svg>
-                <span data-i18n="btnScale">Scale</span>
             </button>
-            <button id="btn-set-scale" class="action hidden" disabled title="Confirm Scale" data-i18n-title="titleSetScale">
+            <button id="btn-set-scale" class="icon-btn action hidden" disabled title="Confirm Scale" data-i18n-title="titleSetScale" aria-label="Confirm Scale">
                 <svg class="icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span data-i18n="btnSetScale">Confirm</span>
             </button>
-            <button id="btn-measure" disabled title="Draw Cables (M)" data-i18n-title="titleMeasure">
+            <button id="btn-measure" class="icon-btn" disabled title="Draw Cables (M)" data-i18n-title="titleMeasure" aria-label="Cables">
                 <svg class="icon" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
-                <span data-i18n="btnMeasure">Cables</span>
             </button>
-            <button id="btn-wireway" disabled title="Draw Wire-way (W)" data-i18n-title="titleWireway">
+            <button id="btn-wireway" class="icon-btn" disabled title="Draw Wire-way (W)" data-i18n-title="titleWireway" aria-label="Wire-way">
                 <svg class="icon" viewBox="0 0 24 24"><path d="M4 10h16M4 14h16M8 10v4M16 10v4"></path></svg>
-                <span data-i18n="btnWireway">Wire-way</span>
             </button>
-            <button id="btn-connect" disabled title="Connect Device Ports (C)" data-i18n-title="titleConnect">
+            <button id="btn-connect" class="icon-btn" disabled title="Connect Device Ports (C)" data-i18n-title="titleConnect" aria-label="Connect">
                 <svg class="icon" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
-                <span data-i18n="btnConnect">Connect</span>
             </button>
-            <button id="btn-delete" class="danger-tool" disabled title="Delete Elements (E)" data-i18n-title="titleDelete">
+            <button id="btn-delete" class="icon-btn danger-tool" disabled title="Delete Elements (E)" data-i18n-title="titleDelete" aria-label="Delete">
                 <svg class="icon" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                <span data-i18n="btnDelete">Delete</span>
             </button>
         </div>
 
@@ -103,13 +93,11 @@
                 <option value="power">Power</option>
                 <option value="default">Default</option>
             </select>
-            <button id="btn-new-cable" class="hidden" disabled title="Start New Cable (N / Enter)" data-i18n-title="titleNewCable">
+            <button id="btn-new-cable" class="icon-btn hidden" disabled title="Start New Cable (N / Enter)" data-i18n-title="titleNewCable" aria-label="New Cable">
                 <svg class="icon" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                <span data-i18n="btnNewCable">New</span>
             </button>
-            <button id="btn-new-wireway" class="hidden" disabled title="Start New Wire-way (Q / Enter)" data-i18n-title="titleNewWireway">
+            <button id="btn-new-wireway" class="icon-btn hidden" disabled title="Start New Wire-way (Q / Enter)" data-i18n-title="titleNewWireway" aria-label="New Wire-way">
                 <svg class="icon" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                <span data-i18n="btnNewWireway">New</span>
             </button>
         </div>
     </div>
@@ -140,30 +128,23 @@
 
 <div id="workspace">
     <div id="sidebar">
-        <div class="sidebar-title" data-i18n="sideTitle">Devices</div>
-        <div class="sidebar-item" data-type="router" title="Router">
+        <div class="sidebar-item" data-type="router" title="Router" data-i18n-title="devRouter" aria-label="Router">
             <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line><circle cx="6" cy="15" r="1"></circle><circle cx="12" cy="15" r="1"></circle><circle cx="18" cy="15" r="1"></circle></svg>
-            <span>Router</span>
         </div>
-        <div class="sidebar-item" data-type="switch" title="Switch">
+        <div class="sidebar-item" data-type="switch" title="Switch" data-i18n-title="devSwitch" aria-label="Switch">
             <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="12" x2="22" y2="12"></line><line x1="6" y1="8" x2="6" y2="16"></line><line x1="10" y1="8" x2="10" y2="16"></line><line x1="14" y1="8" x2="14" y2="16"></line><line x1="18" y1="8" x2="18" y2="16"></line></svg>
-            <span>Switch</span>
         </div>
-        <div class="sidebar-item" data-type="patch" title="Patch Panel">
+        <div class="sidebar-item" data-type="patch" title="Patch Panel" data-i18n-title="devPatch" aria-label="Patch Panel">
             <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="1"></rect><circle cx="6" cy="12" r="1"></circle><circle cx="10" cy="12" r="1"></circle><circle cx="14" cy="12" r="1"></circle><circle cx="18" cy="12" r="1"></circle></svg>
-            <span>Patch</span>
         </div>
-        <div class="sidebar-item" data-type="ap" title="Access Point">
+        <div class="sidebar-item" data-type="ap" title="Access Point" data-i18n-title="devAp" aria-label="Access Point">
             <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"></circle><path d="M12 2a10 10 0 0 1 10 10"></path><path d="M12 6a6 6 0 0 1 6 6"></path><path d="M12 18a6 6 0 0 1-6-6"></path><path d="M12 22a10 10 0 0 1-10-10"></path></svg>
-            <span>AP</span>
         </div>
-        <div class="sidebar-item" data-type="pc" title="PC">
+        <div class="sidebar-item" data-type="pc" title="PC" data-i18n-title="devPc" aria-label="PC">
             <svg class="icon" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-            <span>PC</span>
         </div>
-        <div class="sidebar-item" data-type="rack" title="Rack Cabinet">
+        <div class="sidebar-item" data-type="rack" title="Rack Cabinet" data-i18n-title="devRack" aria-label="Rack Cabinet">
             <svg class="icon" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><line x1="4" y1="6" x2="20" y2="6" stroke="currentColor" stroke-width="2"/><line x1="4" y1="11" x2="20" y2="11" stroke="currentColor" stroke-width="2"/><line x1="4" y1="16" x2="20" y2="16" stroke="currentColor" stroke-width="2"/></svg>
-            <span>Rack</span>
         </div>
     </div>
 
@@ -255,6 +236,6 @@
     <div class="port-popup-grid" id="port-popup-grid"></div>
 </div>
 
-<script defer src="app.js?v=2.6"></script>
+<script defer src="app.js?v=2.7"></script>
 </body>
 </html>
